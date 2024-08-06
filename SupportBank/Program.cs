@@ -5,7 +5,7 @@ using System.IO;
 List<Transaction> transactionsList = new List<Transaction>();
 
 // Open the file using a StreamReader
-using (var reader = new StreamReader("../Transactions2014.csv"))
+using (var reader = new StreamReader("C:/Training/w6d2_SupportBank/Transactions2014.csv"))
 {
     // Read the first line of the file
     var headerLine = reader.ReadLine();
