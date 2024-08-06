@@ -81,17 +81,19 @@ void listUser(List<Account> accounts, string accountName, List<Transaction> tran
     //filter accounts with accountName
     List<Account> thisAccount = accounts.Where(p => p.name == accountName).ToList();
     Account account = thisAccount[0];
-    
+
     Console.WriteLine($"{account.name} has borrowed {account.MoneyBorrowed} and lent {account.MoneyLent}");
     Console.WriteLine($"List of {account.name}'s transactions:");
 
     Console.WriteLine($"{account.name} borrowed:");
-    foreach (var transaction in account.getTransactionsLent(transactionsList)) {
+    foreach (var transaction in account.getTransactionsLent(transactionsList))
+    {
         Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 
     Console.WriteLine($"{account.name} lent:");
-    foreach (var transaction in account.getTransactionsBorrowed(transactionsList)) {
+    foreach (var transaction in account.getTransactionsBorrowed(transactionsList))
+    {
         Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 
@@ -106,11 +108,19 @@ void useSupportBank()
     //from transactions create accounts
     List<Account> accounts = getAccounts(transactionsList);
 
-    
     //user selects if printing all results or results for a specific user
-    listAll(accounts);
+    Console.WriteLine("Would you like to list ALL transactions (ALL)");
+    Console.WriteLine("Or the transactions for a specific unique ACCOUNT? ([NAME])");
+    string command = Console.ReadLine();
 
-    listUser(accounts, "Jon A", transactionsList);
+    if (command == "ALL")
+    {
+        listAll(accounts);
+    }
+    else
+    {
+        listUser(accounts, command, transactionsList);
+    }
 }
 
 useSupportBank();
