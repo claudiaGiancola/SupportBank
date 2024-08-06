@@ -7,14 +7,13 @@ List<Transaction> transactionsList = new List<Transaction>();
 // Open the file using a StreamReader
 using (var reader = new StreamReader("../Transactions2014.csv"))
 {
-    
-    // Read the rest of the file
-    while (!reader.EndOfStream)
-    {
+    // Read the first line of the file
+    var headerLine = reader.ReadLine();
+    string line;
 
-        //Skip the first line
-        // Read the first line of the file
-        var line = reader.ReadLine();
+    // Read the rest of the file
+    while ((line = reader.ReadLine()) != null)
+    {
 
         // Split the data line into an array of values
         var values = line.Split(',');
@@ -33,11 +32,7 @@ using (var reader = new StreamReader("../Transactions2014.csv"))
         // {
         //     Console.Write(value + " ");
         // }
-        
-        Console.WriteLine(transaction.date  + " " + transaction.from + " " +transaction.to+ " " +transaction.narrative+ " " +transaction.amount);
 
+        Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 }
-
-//for every line read, we create an instance of Transaction -->List<Transcation>
-//Transaction1 = Data from line 1
