@@ -55,4 +55,6 @@ foreach (var user in uniqueUsers)
         accounts.Add(account);
         
     };
+
+    Console.WriteLine($"{account.name} has borrowed {account.MoneyBorrowed} and lent {account.MoneyLent}");
 }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SupportBank
-build_property.ProjectDir = c:\Training\w6d2_SupportBank\SupportBank\
+build_property.ProjectDir = C:\Training\w6d2_SupportBank\SupportBank\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
