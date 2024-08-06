@@ -28,11 +28,26 @@ using (var reader = new StreamReader("C:/Training/w6d2_SupportBank/Transactions2
         };
         transactionsList.Add(transaction);
 
-        // foreach (var value in values)
-        // {
-        //     Console.Write(value + " ");
-        // }
-
-        Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
+        //code below tests content of each transaction instance
+        // Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 }
+
+// List<string> uniqueNames = new List<string>();
+
+// foreach (var transaction in transactionsList)
+// {
+    //check each from and to and print them uniquely
+    // if (uniqueNames.Contains(transaction.from)) {
+    //     uniqueNames.Add(transaction.from);
+    // }
+
+    // if (uniqueNames.Contains(transaction.to)) {
+    //     uniqueNames.Add(transaction.to);
+    // }
+    // }
+    
+List<string> userFromList = transactionsList.Select(x => x.from).Distinct().ToList();
+List<string> userToList = transactionsList.Select(x => x.to).Distinct().ToList();
+
+List<string> uniqueUsers = userFromList.Union(userToList).ToList();
