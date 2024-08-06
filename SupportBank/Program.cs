@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 List<Transaction> transactionsList = new List<Transaction>();
 
@@ -33,21 +34,25 @@ using (var reader = new StreamReader("C:/Training/w6d2_SupportBank/Transactions2
     }
 }
 
-// List<string> uniqueNames = new List<string>();
-
-// foreach (var transaction in transactionsList)
-// {
-    //check each from and to and print them uniquely
-    // if (uniqueNames.Contains(transaction.from)) {
-    //     uniqueNames.Add(transaction.from);
-    // }
-
-    // if (uniqueNames.Contains(transaction.to)) {
-    //     uniqueNames.Add(transaction.to);
-    // }
-    // }
-    
 List<string> userFromList = transactionsList.Select(x => x.from).Distinct().ToList();
 List<string> userToList = transactionsList.Select(x => x.to).Distinct().ToList();
 
 List<string> uniqueUsers = userFromList.Union(userToList).ToList();
+
+List<Account> accounts = new List<Account>();
+
+foreach (var user in uniqueUsers)
+{
+    Account account = new Account();
+
+    {
+        account.name = user;
+
+        account.MoneyBorrowed = account.getTransactionsBorrowed(transactionsList).Select(x => x.amount).Sum();
+
+        account.MoneyLent = account.getTransactionsLent(transactionsList).Select(x => x.amount).Sum();
+
+        accounts.Add(account);
+        
+    };
+}
