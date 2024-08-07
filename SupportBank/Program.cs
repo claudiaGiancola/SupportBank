@@ -1,12 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
-using System.IO;
-using System.Security.Cryptography.X509Certificates;
-using NLog;
+﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+// using System.Text.Json;
+// using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 
 //logging materials
 var config = new LoggingConfiguration();
@@ -19,54 +17,24 @@ Logger logger = LogManager.GetCurrentClassLogger();
 
 int skippedTransactions = 0;
 
-String getStringFromFile = File.ReadAllText("C:/Training/w6d2_SupportBank/");
-Console.WriteLine(getStringFromFile);
+List<Transaction> testRead()
+{
+    String getStringFromFile = File.ReadAllText("C:/Training/w6d2_SupportBank/Transactions2013.json");
+    // Console.WriteLine(getStringFromFile);
+    // var jsonFle = JsonConverter.DeserializeObject<List<Transaction>>(getStringFromFile);
+    var transactionsList = JsonConvert.DeserializeObject<List<Transaction>>(getStringFromFile);
 
+    return transactionsList;
 
-// List<Transaction> getTransactionsListFromJSON(string jsonPath) {
-
-// using (StreamReader file = File.OpenText(@jsonPath))
-// //{
-//     //Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
-//     List<Transaction> transactionList = JsonConverter.DeserializeObject<List<Transaction>>(jsonPath);
-// //}
-
-// return transactionList;
-
-// }
-
-// List<Transaction> Read(string path)
-// {
-//     using (StreamReader file = new StreamReader(path))
-//     {
-//         try
-//         {
-//             string json = file.ReadToEnd();
-
-//             // var serializerSettings = new JsonSerializerSettings()
-//             // {
-//             //     ContractResolver = new CamelCasePropertyNamesContractResolver()
-//             // };
-//             List<Transaction> transactionList = JsonConvert.DeserializeObject<List<Transaction>>(json);
-//             return transactionList;
-//         }
-//         catch (Exception)
-//         {
-//             Console.WriteLine("Problem reading file");
-
-//             return null;
-//         }
-//     }
-// }
-
+}
 
 List<Transaction> getTransactionsListFromCSV(string csvPath)
 {
     List<Transaction> transactionsList = new List<Transaction>();
 
     // Open the file using a StreamReader
-    using (var  = new StreamReader(csvPath))
-    {reader
+    using (var reader = new StreamReader(csvPath))
+    {
         // Read the first line of the file
         var headerLine = reader.ReadLine();
         string line;
@@ -100,15 +68,10 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
 
                 try
                 {
-                    // DateTime result;
-                    // if (DateTime.TryParse(values[0], out DateTime result))
-                    // {
-                    //     transaction.date = values[0];
-                    // }
 
                     transaction.date = DateTime.Parse(values[0]);
-                    transaction.from = values[1];
-                    transaction.to = values[2];
+                    transaction.FromAccount = values[1];
+                    transaction.ToAccount = values[2];
                     transaction.narrative = values[3];
                     transaction.amount = float.Parse(values[4]);
 
@@ -141,8 +104,8 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
 
 List<Account> getAccounts(List<Transaction> transactionsList)
 {
-    List<string> userFromList = transactionsList.Select(x => x.from).Distinct().ToList();
-    List<string> userToList = transactionsList.Select(x => x.to).Distinct().ToList();
+    List<string> userFromList = transactionsList.Select(x => x.FromAccount).Distinct().ToList();
+    List<string> userToList = transactionsList.Select(x => x.ToAccount).Distinct().ToList();
 
     List<string> uniqueUsers = userFromList.Union(userToList).ToList();
 
@@ -186,13 +149,13 @@ void listUser(List<Account> accounts, string accountName, List<Transaction> tran
     Console.WriteLine($"{account.name} lent:");
     foreach (var transaction in account.getTransactionsLent(transactionsList))
     {
-        Console.WriteLine(transaction.date.ToShortDateString() + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
+        Console.WriteLine(transaction.date.ToShortDateString() + " " + transaction.FromAccount + " " + transaction.ToAccount + " " + transaction.narrative + " " + transaction.amount);
     }
 
     Console.WriteLine($"{account.name} borrowed:");
     foreach (var transaction in account.getTransactionsBorrowed(transactionsList))
     {
-        Console.WriteLine(transaction.date.ToShortDateString() + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
+        Console.WriteLine(transaction.date.ToShortDateString() + " " + transaction.FromAccount + " " + transaction.ToAccount + " " + transaction.narrative + " " + transaction.amount);
     }
 
 }
@@ -216,11 +179,14 @@ void useSupportBank()
 {
     logger.Info("Program starts");
 
+    List<Transaction> transactionsList = testRead();
+
     //readFile and create transactions instances
     // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/Transactions2014.csv");
-    List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
+    // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
 
     //from transactions create accounts
+    // List<Account> accounts = getAccounts(transactionsList);
     List<Account> accounts = getAccounts(transactionsList);
 
     //user selects if printing all results or results for a specific user

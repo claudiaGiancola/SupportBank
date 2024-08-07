@@ -14,7 +14,7 @@ class Account
 
         foreach (Transaction transaction in transactionsList)
         {
-            if (transaction.from == this.name)
+            if (transaction.FromAccount == this.name)
             {
                 listTransactionsLent.Add(transaction);
             }
@@ -28,7 +28,7 @@ class Account
 
         foreach (Transaction transaction in transactionsList)
         {
-            if (transaction.to == this.name)
+            if (transaction.ToAccount == this.name)
             {
                 listTransactionsBorrowed.Add(transaction);
             }
