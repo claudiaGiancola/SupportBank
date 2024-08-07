@@ -5,24 +5,68 @@ using System.Security.Cryptography.X509Certificates;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
+//logging materials
 var config = new LoggingConfiguration();
 var target = new FileTarget { FileName = @"C:\Training\w6d2_SupportBank\SupportBank.log", Layout = @"${longdate} ${level} - ${logger}: ${message}" };
 config.AddTarget("File Logger", target);
 config.LoggingRules.Add(new LoggingRule("*", LogLevel.Trace, target));
 LogManager.Configuration = config;
-
 Logger logger = LogManager.GetCurrentClassLogger();
 
+
 int skippedTransactions = 0;
+
+String getStringFromFile = File.ReadAllText("C:/Training/w6d2_SupportBank/");
+Console.WriteLine(getStringFromFile);
+
+
+// List<Transaction> getTransactionsListFromJSON(string jsonPath) {
+
+// using (StreamReader file = File.OpenText(@jsonPath))
+// //{
+//     //Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
+//     List<Transaction> transactionList = JsonConverter.DeserializeObject<List<Transaction>>(jsonPath);
+// //}
+
+// return transactionList;
+
+// }
+
+// List<Transaction> Read(string path)
+// {
+//     using (StreamReader file = new StreamReader(path))
+//     {
+//         try
+//         {
+//             string json = file.ReadToEnd();
+
+//             // var serializerSettings = new JsonSerializerSettings()
+//             // {
+//             //     ContractResolver = new CamelCasePropertyNamesContractResolver()
+//             // };
+//             List<Transaction> transactionList = JsonConvert.DeserializeObject<List<Transaction>>(json);
+//             return transactionList;
+//         }
+//         catch (Exception)
+//         {
+//             Console.WriteLine("Problem reading file");
+
+//             return null;
+//         }
+//     }
+// }
+
 
 List<Transaction> getTransactionsListFromCSV(string csvPath)
 {
     List<Transaction> transactionsList = new List<Transaction>();
 
     // Open the file using a StreamReader
-    using (var reader = new StreamReader(csvPath))
-    {
+    using (var  = new StreamReader(csvPath))
+    {reader
         // Read the first line of the file
         var headerLine = reader.ReadLine();
         string line;
@@ -175,7 +219,6 @@ void useSupportBank()
     //readFile and create transactions instances
     // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/Transactions2014.csv");
     List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
-    List<Transaction> skippedTransactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
 
     //from transactions create accounts
     List<Account> accounts = getAccounts(transactionsList);
