@@ -33,7 +33,7 @@ class Account
                 listTransactionsBorrowed.Add(transaction);
             }
         }
-
+        Logger.Info("Created Transaction Borrowed list");
         return listTransactionsBorrowed;
     }
 }

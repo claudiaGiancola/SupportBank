@@ -9,11 +9,12 @@ using NLog.Targets;
 var config = new LoggingConfiguration();
 var target = new FileTarget { FileName = @"C:\Training\w6d2_SupportBank\SupportBank.log", Layout = @"${longdate} ${level} - ${logger}: ${message}" };
 config.AddTarget("File Logger", target);
-config.LoggingRules.Add(new LoggingRule("*", LogLevel.Info, target));
-config.LoggingRules.Add(new LoggingRule("*", LogLevel.Debug, target));
+config.LoggingRules.Add(new LoggingRule("*", LogLevel.Trace, target));
 LogManager.Configuration = config;
 
 Logger logger = LogManager.GetCurrentClassLogger();
+
+List<Transaction> skippedTransactionsList = new List<Transaction>();
 
 List<Transaction> getTransactionsListFromCSV(string csvPath)
 {
@@ -25,25 +26,60 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
         // Read the first line of the file
         var headerLine = reader.ReadLine();
         string line;
+        int fileLine = 1;
 
         // Read the rest of the file
         while ((line = reader.ReadLine()) != null)
         {
+            fileLine++;
 
             // Split the data line into an array of values
             var values = line.Split(',');
 
             Transaction transaction = new Transaction();
 
-            transaction.date = values[0];
-            transaction.from = values[1];
-            transaction.to = values[2];
-            transaction.narrative = values[3];
-            transaction.amount = float.Parse(values[4]);
+            bool isLineOk = true;
 
-            transactionsList.Add(transaction);
+            foreach (var value in values)
+            {
+                if (value == "" || value == null)
+                {
+                    logger.Warn($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
+                    Console.WriteLine($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
+                    isLineOk = false;
+                }
+            }
 
-            logger.Info("Created Transaction List");
+            if (isLineOk == true)
+            {
+
+                try
+                {
+                    transaction.date = values[0];
+                    transaction.from = values[1];
+                    transaction.to = values[2];
+                    transaction.narrative = values[3];
+                    transaction.amount = float.Parse(values[4]);
+
+                    transactionsList.Add(transaction);
+
+                    logger.Info($"Created Transaction List for line {fileLine}");
+
+                }
+                catch (Exception e)
+                {
+                    logger.Error($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
+                    Console.WriteLine($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
+
+                    // transactionsList.Remove(transaction);
+                    skippedTransactionsList.Add(transaction);
+
+                }
+
+                // transactionsList.Add(transaction);
+
+                // logger.Info($"Created Transaction List for line {fileLine}");
+            }
 
             //code below tests content of each transaction instance
             // Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
@@ -110,13 +146,29 @@ void listUser(List<Account> accounts, string accountName, List<Transaction> tran
 
 }
 
+void listSkippedTransactions()
+{
+    //just creating a line for better readability
+    Console.WriteLine("***********");
+
+    if (skippedTransactionsList.Count != 0)
+    {
+        Console.WriteLine($"There are {skippedTransactionsList.Count} transactions missing, please check logging file for more information.");
+    }
+    else
+    {
+        Console.WriteLine("No transactions missing.");
+    }
+}
+
 void useSupportBank()
 {
-    logger.Debug("Program starts");
+    logger.Info("Program starts");
 
     //readFile and create transactions instances
-    List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/Transactions2014.csv");
-    // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
+    // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/Transactions2014.csv");
+    List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
+    List<Transaction> skippedTransactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
 
     //from transactions create accounts
     List<Account> accounts = getAccounts(transactionsList);
@@ -134,6 +186,8 @@ void useSupportBank()
     {
         listUser(accounts, command, transactionsList);
     }
+
+    listSkippedTransactions();
 }
 
 useSupportBank();
