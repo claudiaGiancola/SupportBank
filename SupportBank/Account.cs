@@ -1,5 +1,10 @@
+using NLog;
+using NLog.Config;
+using NLog.Targets;
+
 class Account
 {
+    private static readonly ILogger Logger = LogManager.GetCurrentClassLogger();
     public string name;
     public float MoneyBorrowed { get; set; }
     public float MoneyLent { get; set; }
@@ -14,7 +19,7 @@ class Account
                 listTransactionsLent.Add(transaction);
             }
         }
-
+        Logger.Info("Created Transaction Lent list");
         return listTransactionsLent;
     }
     public List<Transaction> getTransactionsBorrowed(List<Transaction> transactionsList)

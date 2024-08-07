@@ -2,6 +2,18 @@
 using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using NLog;
+using NLog.Config;
+using NLog.Targets;
+
+var config = new LoggingConfiguration();
+var target = new FileTarget { FileName = @"C:\Training\w6d2_SupportBank\SupportBank.log", Layout = @"${longdate} ${level} - ${logger}: ${message}" };
+config.AddTarget("File Logger", target);
+config.LoggingRules.Add(new LoggingRule("*", LogLevel.Info, target));
+config.LoggingRules.Add(new LoggingRule("*", LogLevel.Debug, target));
+LogManager.Configuration = config;
+
+Logger logger = LogManager.GetCurrentClassLogger();
 
 List<Transaction> getTransactionsListFromCSV(string csvPath)
 {
@@ -22,14 +34,16 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
             var values = line.Split(',');
 
             Transaction transaction = new Transaction();
-            {
-                transaction.date = values[0];
-                transaction.from = values[1];
-                transaction.to = values[2];
-                transaction.narrative = values[3];
-                transaction.amount = float.Parse(values[4]);
-            };
+
+            transaction.date = values[0];
+            transaction.from = values[1];
+            transaction.to = values[2];
+            transaction.narrative = values[3];
+            transaction.amount = float.Parse(values[4]);
+
             transactionsList.Add(transaction);
+
+            logger.Info("Created Transaction List");
 
             //code below tests content of each transaction instance
             // Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
@@ -51,17 +65,14 @@ List<Account> getAccounts(List<Transaction> transactionsList)
     {
         Account account = new Account();
 
-        {
-            account.name = user;
+        account.name = user;
 
-            account.MoneyBorrowed = account.getTransactionsBorrowed(transactionsList).Select(x => x.amount).Sum();
+        account.MoneyBorrowed = account.getTransactionsBorrowed(transactionsList).Select(x => x.amount).Sum();
 
-            account.MoneyLent = account.getTransactionsLent(transactionsList).Select(x => x.amount).Sum();
+        account.MoneyLent = account.getTransactionsLent(transactionsList).Select(x => x.amount).Sum();
 
-            accounts.Add(account);
-            //Console.WriteLine($"{account.name} has borrowed {account.MoneyBorrowed} and lent {account.MoneyLent}");
-
-        };
+        accounts.Add(account);
+        //Console.WriteLine($"{account.name} has borrowed {account.MoneyBorrowed} and lent {account.MoneyLent}");
 
     }
     return accounts;
@@ -85,13 +96,13 @@ void listUser(List<Account> accounts, string accountName, List<Transaction> tran
     Console.WriteLine($"{account.name} has borrowed {account.MoneyBorrowed} and lent {account.MoneyLent}");
     Console.WriteLine($"List of {account.name}'s transactions:");
 
-    Console.WriteLine($"{account.name} borrowed:");
+    Console.WriteLine($"{account.name} lent:");
     foreach (var transaction in account.getTransactionsLent(transactionsList))
     {
         Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 
-    Console.WriteLine($"{account.name} lent:");
+    Console.WriteLine($"{account.name} borrowed:");
     foreach (var transaction in account.getTransactionsBorrowed(transactionsList))
     {
         Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
@@ -101,9 +112,11 @@ void listUser(List<Account> accounts, string accountName, List<Transaction> tran
 
 void useSupportBank()
 {
+    logger.Debug("Program starts");
 
     //readFile and create transactions instances
     List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/Transactions2014.csv");
+    // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
 
     //from transactions create accounts
     List<Account> accounts = getAccounts(transactionsList);
