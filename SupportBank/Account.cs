@@ -19,7 +19,7 @@ class Account
                 listTransactionsLent.Add(transaction);
             }
         }
-        Logger.Info("Created Transaction Lent list");
+        // Logger.Info("Created Transaction Lent list");
         return listTransactionsLent;
     }
     public List<Transaction> getTransactionsBorrowed(List<Transaction> transactionsList)
@@ -33,7 +33,7 @@ class Account
                 listTransactionsBorrowed.Add(transaction);
             }
         }
-        Logger.Info("Created Transaction Borrowed list");
+        // Logger.Info("Created Transaction Borrowed list");
         return listTransactionsBorrowed;
     }
 }

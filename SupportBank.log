@@ -1,118 +1,436 @@
-2024-08-07 12:37:30.6718 Info - SupportBank.Program: Program starts
-2024-08-07 12:37:30.6951 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 3
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 4
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 5
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 6
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 7
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 8
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 9
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 10
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 11
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 12
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 13
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 14
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 15
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 16
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 17
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 18
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 19
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 20
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 21
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 22
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 23
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 24
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 25
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 26
-2024-08-07 12:37:30.7184 Info - SupportBank.Program: Created Transaction List for line 27
-2024-08-07 12:37:30.7249 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 28
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 29
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 30
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 31
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 32
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 33
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 34
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 35
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 36
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 37
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 38
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 39
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 40
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 41
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 42
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 43
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 44
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 45
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 46
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 47
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 48
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 49
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 50
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 51
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 52
-2024-08-07 12:37:30.7249 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 3
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 4
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 5
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 6
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 7
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 8
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 9
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 10
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 11
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 12
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 13
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 14
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 15
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 16
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 17
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 18
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 19
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 20
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 21
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 22
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 23
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 24
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 25
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 26
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 27
-2024-08-07 12:37:30.7249 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 28
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 29
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 30
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 31
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 32
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 33
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 34
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 35
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 36
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 37
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 38
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 39
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 40
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 41
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 42
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 43
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 44
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 45
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 46
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 47
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 48
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 49
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 50
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 51
-2024-08-07 12:37:30.7249 Info - SupportBank.Program: Created Transaction List for line 52
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:30.7436 Info - SupportBank.Account: Created Transaction Lent list
-2024-08-07 12:37:32.8278 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.5931 Info - SupportBank.Program: Program starts
+2024-08-07 13:53:44.6406 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:53:44.7080 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:53:44.7080 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:53:44.7153 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:53:44.7153 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:53:44.7153 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:53:44.7153 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:53:44.7153 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:53:44.7153 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Borrowed list
+2024-08-07 13:53:44.7318 Info - SupportBank.Account: Created Transaction Lent list
+2024-08-07 13:55:32.6037 Info - SupportBank.Program: Program starts
+2024-08-07 13:55:32.6303 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:55:32.7447 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:55:32.7491 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:55:32.7491 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:55:32.7491 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:55:32.7491 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:55:32.7491 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:55:32.7491 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:56:24.2213 Info - SupportBank.Program: Program starts
+2024-08-07 13:56:24.2452 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:56:24.3024 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:56:24.3024 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:56:24.3024 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:56:24.3024 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:56:24.3024 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:56:24.3100 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:56:24.3100 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:56:43.8376 Info - SupportBank.Program: Program starts
+2024-08-07 13:56:43.8614 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:56:43.9110 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:56:43.9110 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped
+2024-08-07 13:56:43.9110 Warn - SupportBank.Program: Missing value at line 2. Please fill in all the columns of the file. Transaction at line 2 was skipped.
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 3
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 4
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 5
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 6
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 7
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 8
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 9
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 10
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 11
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 12
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 13
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 14
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 15
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 16
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 17
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 18
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 19
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 20
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 21
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 22
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 23
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 24
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 25
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 26
+2024-08-07 13:56:43.9110 Info - SupportBank.Program: Created Transaction List for line 27
+2024-08-07 13:56:43.9110 Error - SupportBank.Program: Line 28 of your file causes an error: The input string 'One Cheeseburger' was not in a correct format. Transaction at line 28 was skipped
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 29
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 30
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 31
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 32
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 33
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 34
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 35
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 36
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 37
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 38
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 39
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 40
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 41
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 42
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 43
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 44
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 45
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 46
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 47
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 48
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 49
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 50
+2024-08-07 13:56:43.9184 Info - SupportBank.Program: Created Transaction List for line 51
+2024-08-07 13:56:43.9184 Error - SupportBank.Program: Line 52 of your file causes an error: The string 'Last Thursday' was not recognized as a valid DateTime. There is an unknown word starting at index '0'. Transaction at line 52 was skipped

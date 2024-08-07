@@ -5,7 +5,7 @@ using NLog.Targets;
 class Transaction
 {
     private static readonly ILogger Logger = LogManager.GetCurrentClassLogger();
-    public string date { get; set; }
+    public DateTime date { get; set; }
     public string from { get; set; }
     public string to { get; set; }
     public string narrative { get; set; }

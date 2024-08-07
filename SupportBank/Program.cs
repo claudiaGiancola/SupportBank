@@ -14,7 +14,7 @@ LogManager.Configuration = config;
 
 Logger logger = LogManager.GetCurrentClassLogger();
 
-List<Transaction> skippedTransactionsList = new List<Transaction>();
+int skippedTransactions = 0;
 
 List<Transaction> getTransactionsListFromCSV(string csvPath)
 {
@@ -46,6 +46,7 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
                 {
                     logger.Warn($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
                     Console.WriteLine($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
+                    skippedTransactions++;
                     isLineOk = false;
                 }
             }
@@ -55,7 +56,13 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
 
                 try
                 {
-                    transaction.date = values[0];
+                    // DateTime result;
+                    // if (DateTime.TryParse(values[0], out DateTime result))
+                    // {
+                    //     transaction.date = values[0];
+                    // }
+
+                    transaction.date = DateTime.Parse(values[0]);
                     transaction.from = values[1];
                     transaction.to = values[2];
                     transaction.narrative = values[3];
@@ -72,7 +79,7 @@ List<Transaction> getTransactionsListFromCSV(string csvPath)
                     Console.WriteLine($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
 
                     // transactionsList.Remove(transaction);
-                    skippedTransactionsList.Add(transaction);
+                    skippedTransactions++;
 
                 }
 
@@ -135,13 +142,13 @@ void listUser(List<Account> accounts, string accountName, List<Transaction> tran
     Console.WriteLine($"{account.name} lent:");
     foreach (var transaction in account.getTransactionsLent(transactionsList))
     {
-        Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
+        Console.WriteLine(transaction.date.ToShortDateString() + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 
     Console.WriteLine($"{account.name} borrowed:");
     foreach (var transaction in account.getTransactionsBorrowed(transactionsList))
     {
-        Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
+        Console.WriteLine(transaction.date.ToShortDateString() + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
     }
 
 }
@@ -151,9 +158,9 @@ void listSkippedTransactions()
     //just creating a line for better readability
     Console.WriteLine("***********");
 
-    if (skippedTransactionsList.Count != 0)
+    if (skippedTransactions != 0)
     {
-        Console.WriteLine($"There are {skippedTransactionsList.Count} transactions missing, please check logging file for more information.");
+        Console.WriteLine($"There are {skippedTransactions} transactions missing, please check logging file for more information.");
     }
     else
     {
