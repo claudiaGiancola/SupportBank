@@ -143,15 +143,11 @@ class ReadFile
 
             transaction.ToAccount = node["Parties"]["To"].InnerText;
             transaction.FromAccount = node["Parties"]["From"].InnerText;
+            transaction.date = DateTime.FromOADate(Convert.ToDouble(node.Attributes["Date"].InnerText));
 
-
-            // transaction.date = DateTime.FromOADate(root[]);
             transactionsList.Add(transaction);
 
         }
-
-        // var transaction = root["SupportTransaction"];
-        // var description = transaction["Description"];
 
     return transactionsList;
 

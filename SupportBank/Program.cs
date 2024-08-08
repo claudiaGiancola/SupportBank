@@ -106,7 +106,7 @@ List<Transaction> readSelectedFile(string selectedFilePath)
             transactionsList = ReadFile.ReadJson(selectedFilePath);
             break;
         case ".xml":
-            ReadFile.ReadXml(selectedFilePath);
+            transactionsList = ReadFile.ReadXml(selectedFilePath);
             break;
         case ".csv":
             transactionsList = ReadFile.ReadCsv(selectedFilePath);
