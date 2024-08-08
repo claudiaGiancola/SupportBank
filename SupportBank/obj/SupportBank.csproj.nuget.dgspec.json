@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj": {}
+    "c:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj": {}
   },
   "projects": {
-    "C:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj": {
+    "c:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj",
+        "projectUniqueName": "c:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj",
         "projectName": "SupportBank",
-        "projectPath": "C:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj",
+        "projectPath": "c:\\Training\\w6d2_SupportBank\\SupportBank\\SupportBank.csproj",
         "packagesPath": "C:\\Users\\ClaGia\\.nuget\\packages\\",
-        "outputPath": "C:\\Training\\w6d2_SupportBank\\SupportBank\\obj\\",
+        "outputPath": "c:\\Training\\w6d2_SupportBank\\SupportBank\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ClaGia\\AppData\\Roaming\\NuGet\\NuGet.Config"

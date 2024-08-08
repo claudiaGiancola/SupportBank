@@ -5,6 +5,7 @@ using NLog.Targets;
 using System;
 using System.IO;
 using Newtonsoft.Json;
+using System.Xml;
 
 
 class ReadFile
@@ -121,5 +122,39 @@ class ReadFile
 
     }
 
-}
+    public static List<Transaction> ReadXml(string path)
+    {
 
+        List<Transaction> transactionsList = new List<Transaction>();
+
+        XmlDocument doc = new XmlDocument();
+        doc.Load(path);
+        XmlElement root = doc.DocumentElement;
+
+        foreach (XmlNode node in root.ChildNodes)
+        {
+
+            // Console.WriteLine(node.Name + ": " + node.InnerText);
+            // Console.WriteLine(node["Description"].InnerText);
+
+            Transaction transaction = new Transaction();
+            transaction.narrative = node["Description"].InnerText;
+            transaction.amount = float.Parse(node["Value"].InnerText);
+
+            transaction.ToAccount = node["Parties"]["To"].InnerText;
+            transaction.FromAccount = node["Parties"]["From"].InnerText;
+
+
+            // transaction.date = DateTime.FromOADate(root[]);
+            transactionsList.Add(transaction);
+
+        }
+
+        // var transaction = root["SupportTransaction"];
+        // var description = transaction["Description"];
+
+    return transactionsList;
+
+    }
+
+}
