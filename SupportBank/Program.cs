@@ -179,6 +179,8 @@ void useSupportBank()
 {
     logger.Info("Program starts");
 
+    ReadFile.ListFiles();
+
     List<Transaction> transactionsList = testRead();
 
     //readFile and create transactions instances
