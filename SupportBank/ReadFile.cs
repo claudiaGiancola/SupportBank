@@ -4,19 +4,15 @@ using NLog.Config;
 using NLog.Targets;
 using System;
 using System.IO;
+using Newtonsoft.Json;
 
-// Make changes so that when a user runs the program they can see a list of all the transaction files and pick which file they will get a report from.
-// Try to do this in a way where you don’t have to hard code the file names.
-
-//list file:
-// take the path: C:\Training\w6d2_SupportBank
-// list all files .csv .json and .xml at that path (possibly associated with a number)
-// user selects the number and program runs appropriate ReadFile method
 
 class ReadFile
 {
+    private static readonly ILogger Logger = LogManager.GetCurrentClassLogger();
+    public static int skippedTransactionsCount = 0;
 
-    public static void ListFiles()
+    public static string ListFiles()
     {
         int fileCount = 0;
         string selectedFile = "";
@@ -30,26 +26,100 @@ class ReadFile
         Console.WriteLine("The number of files is {0}.", dirs.Count);
         foreach (string[] dir in dirs)
         {
-            foreach (string file in dir) {
-            fileCount++;
-            Console.WriteLine($"{fileCount}) {file}");
-            files.Add(file);
+            foreach (string file in dir)
+            {
+                fileCount++;
+                Console.WriteLine($"{fileCount}) {file}");
+                files.Add(file);
             }
         }
 
         Console.WriteLine("Choose a file (select its number):");
         selectedFile = files[Int32.Parse(Console.ReadLine()) - 1];
 
-        Console.WriteLine($"You selected {selectedFile}");
+        return selectedFile;
     }
 
-    // public static void ReadCsv();
+    public static List<Transaction> ReadCsv(string path)
+    {
+        List<Transaction> transactionsList = new List<Transaction>();
+        //skippedTransactionsCount = 0;
 
-    // public static void ReadJson();
+        // Open the file using a StreamReader
+        using (var reader = new StreamReader(path))
+        {
+            // Read the first line of the file
+            var headerLine = reader.ReadLine();
+            string line;
+            int fileLine = 1;
+
+            // Read the rest of the file
+            while ((line = reader.ReadLine()) != null)
+            {
+                fileLine++;
+
+                // Split the data line into an array of values
+                var values = line.Split(',');
+
+                Transaction transaction = new Transaction();
+
+                bool isLineOk = true;
+
+                foreach (var value in values)
+                {
+                    if (value == "" || value == null)
+                    {
+                        Logger.Warn($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
+                        Console.WriteLine($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
+                        skippedTransactionsCount++;
+                        isLineOk = false;
+                    }
+                }
+
+                if (isLineOk == true)
+                {
+
+                    try
+                    {
+
+                        transaction.date = DateTime.Parse(values[0]);
+                        transaction.FromAccount = values[1];
+                        transaction.ToAccount = values[2];
+                        transaction.narrative = values[3];
+                        transaction.amount = float.Parse(values[4]);
+
+                        transactionsList.Add(transaction);
+
+                        Logger.Info($"Created Transaction List for line {fileLine}");
+
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.Error($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
+                        Console.WriteLine($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
+
+                        // transactionsList.Remove(transaction);
+                        skippedTransactionsCount++;
+
+                    }
+
+                }
+
+            }
+        }
+
+        return transactionsList;
+    }
+
+    public static List<Transaction> ReadJson(string path)
+    {
+
+        String getStringFromFile = File.ReadAllText(path);
+        var transactionsList = JsonConvert.DeserializeObject<List<Transaction>>(getStringFromFile);
+
+        return transactionsList;
+
+    }
 
 }
-
-//do you need to consider the digits after the . in the path?
-//".csv" or ".json" or ".xml"
-// /.(.*)/g
 

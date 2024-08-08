@@ -4,6 +4,7 @@ using NLog.Targets;
 // using System.Text.Json;
 // using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 
 //logging materials
@@ -14,93 +15,6 @@ config.LoggingRules.Add(new LoggingRule("*", LogLevel.Trace, target));
 LogManager.Configuration = config;
 Logger logger = LogManager.GetCurrentClassLogger();
 
-
-int skippedTransactions = 0;
-
-List<Transaction> testRead()
-{
-    String getStringFromFile = File.ReadAllText("C:/Training/w6d2_SupportBank/Transactions2013.json");
-    // Console.WriteLine(getStringFromFile);
-    // var jsonFle = JsonConverter.DeserializeObject<List<Transaction>>(getStringFromFile);
-    var transactionsList = JsonConvert.DeserializeObject<List<Transaction>>(getStringFromFile);
-
-    return transactionsList;
-
-}
-
-List<Transaction> getTransactionsListFromCSV(string csvPath)
-{
-    List<Transaction> transactionsList = new List<Transaction>();
-
-    // Open the file using a StreamReader
-    using (var reader = new StreamReader(csvPath))
-    {
-        // Read the first line of the file
-        var headerLine = reader.ReadLine();
-        string line;
-        int fileLine = 1;
-
-        // Read the rest of the file
-        while ((line = reader.ReadLine()) != null)
-        {
-            fileLine++;
-
-            // Split the data line into an array of values
-            var values = line.Split(',');
-
-            Transaction transaction = new Transaction();
-
-            bool isLineOk = true;
-
-            foreach (var value in values)
-            {
-                if (value == "" || value == null)
-                {
-                    logger.Warn($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
-                    Console.WriteLine($"Missing value at line {fileLine}. Please fill in all the columns of the file. Transaction at line {fileLine} was skipped.");
-                    skippedTransactions++;
-                    isLineOk = false;
-                }
-            }
-
-            if (isLineOk == true)
-            {
-
-                try
-                {
-
-                    transaction.date = DateTime.Parse(values[0]);
-                    transaction.FromAccount = values[1];
-                    transaction.ToAccount = values[2];
-                    transaction.narrative = values[3];
-                    transaction.amount = float.Parse(values[4]);
-
-                    transactionsList.Add(transaction);
-
-                    logger.Info($"Created Transaction List for line {fileLine}");
-
-                }
-                catch (Exception e)
-                {
-                    logger.Error($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
-                    Console.WriteLine($"Line {fileLine} of your file causes an error: {e.Message} Transaction at line {fileLine} was skipped");
-
-                    // transactionsList.Remove(transaction);
-                    skippedTransactions++;
-
-                }
-
-                // transactionsList.Add(transaction);
-
-                // logger.Info($"Created Transaction List for line {fileLine}");
-            }
-
-            //code below tests content of each transaction instance
-            // Console.WriteLine(transaction.date + " " + transaction.from + " " + transaction.to + " " + transaction.narrative + " " + transaction.amount);
-        }
-    }
-    return transactionsList;
-}
 
 List<Account> getAccounts(List<Transaction> transactionsList)
 {
@@ -165,9 +79,9 @@ void listSkippedTransactions()
     //just creating a line for better readability
     Console.WriteLine("***********");
 
-    if (skippedTransactions != 0)
+    if (ReadFile.skippedTransactionsCount != 0)
     {
-        Console.WriteLine($"There are {skippedTransactions} transactions missing, please check logging file for more information.");
+        Console.WriteLine($"There are {ReadFile.skippedTransactionsCount} transactions missing, please check logging file for more information.");
     }
     else
     {
@@ -175,20 +89,47 @@ void listSkippedTransactions()
     }
 }
 
+
+List<Transaction> readSelectedFile(string selectedFilePath)
+{
+    //get the extension from selectedFilePath
+
+    string pattern = @"(\.[^.]+)$";
+    Regex rg = new Regex(pattern);
+    Match m = rg.Match(selectedFilePath);
+
+    List<Transaction> transactionsList = new List<Transaction>();
+
+    switch (m.Value)
+    {
+        case ".json":
+            transactionsList = ReadFile.ReadJson(selectedFilePath);
+            break;
+        case ".xml":
+            // code block
+            break;
+        case ".csv":
+            transactionsList = ReadFile.ReadCsv(selectedFilePath);
+            break;
+        default:
+            // code block
+            break;
+    }
+
+    return transactionsList;
+}
+
 void useSupportBank()
 {
+
     logger.Info("Program starts");
 
-    ReadFile.ListFiles();
-
-    List<Transaction> transactionsList = testRead();
+    string selectedFilePath = ReadFile.ListFiles();
 
     //readFile and create transactions instances
-    // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/Transactions2014.csv");
-    // List<Transaction> transactionsList = getTransactionsListFromCSV("C:/Training/w6d2_SupportBank/DodgyTransactions2015.csv");
+    List<Transaction> transactionsList = readSelectedFile(selectedFilePath);
 
     //from transactions create accounts
-    // List<Account> accounts = getAccounts(transactionsList);
     List<Account> accounts = getAccounts(transactionsList);
 
     //user selects if printing all results or results for a specific user
