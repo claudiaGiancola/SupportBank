@@ -149,8 +149,52 @@ class ReadFile
 
         }
 
-    return transactionsList;
+        return transactionsList;
 
+    }
+
+    public static List<Transaction> readSelectedFile(string selectedFilePath)
+    {
+        //get the extension from selectedFilePath
+
+        string pattern = @"(\.[^.]+)$";
+        Regex rg = new Regex(pattern);
+        Match m = rg.Match(selectedFilePath);
+
+        List<Transaction> transactionsList = new List<Transaction>();
+
+        switch (m.Value)
+        {
+            case ".json":
+                transactionsList = ReadFile.ReadJson(selectedFilePath);
+                break;
+            case ".xml":
+                transactionsList = ReadFile.ReadXml(selectedFilePath);
+                break;
+            case ".csv":
+                transactionsList = ReadFile.ReadCsv(selectedFilePath);
+                break;
+            default:
+                // code block
+                break;
+        }
+
+        return transactionsList;
+    }
+
+    public static void getSkippedTransactionsCount()
+    {
+        //just creating a line for better readability
+        Console.WriteLine("***********");
+
+        if (ReadFile.skippedTransactionsCount != 0)
+        {
+            Console.WriteLine($"There are {ReadFile.skippedTransactionsCount} transactions missing, please check logging file for more information.");
+        }
+        else
+        {
+            Console.WriteLine("No transactions missing.");
+        }
     }
 
 }
