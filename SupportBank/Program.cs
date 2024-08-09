@@ -27,6 +27,26 @@ void useSupportBank()
     //Get number of transactions lines skipped
     ReadFile.getSkippedTransactionsCount();
 
+    //Allow the user to add more transactions to the transaction list
+    string customTransactions = "";
+    int newTransactionsCount = 0;
+
+    do
+    {
+        Console.WriteLine("Do you want to add a custom transaction? (Y/N)");
+        customTransactions = Console.ReadLine();
+        if (customTransactions == "Y")
+        {
+            newTransactionsCount++;
+            TransactionList.addNewTransaction(transactionsList);
+        }
+        else { 
+            customTransactions = "N"; 
+            Console.WriteLine($"You added {newTransactionsCount} transactions");
+        }
+    } while (customTransactions == "Y");
+
+
     //Create unique accounts for all the people in the transaction list
     List<Account> accounts = Account.getAccounts(transactionsList);
 
