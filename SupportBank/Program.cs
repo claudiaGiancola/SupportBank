@@ -1,8 +1,6 @@
 ﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
-// using System.Text.Json;
-// using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
@@ -147,6 +145,16 @@ void useSupportBank()
     }
 
     listSkippedTransactions();
+
+    Console.WriteLine("Do you want to export your file? (Y/N)");
+    string continueToExport = Console.ReadLine();
+
+    if (continueToExport == "Y") {
+        WriteFile.ExportCsv(transactionsList);
+    } else{
+        Console.WriteLine("Goodbye!");
+    }
+    
 }
 
 useSupportBank();
